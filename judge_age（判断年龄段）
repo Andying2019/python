@@ -1,0 +1,17 @@
+def age():
+	x=input('age:')
+	int_x=int(x)
+	if int_x>=18:
+		return('adult')
+	elif int_x>=6:
+		return('teenager')
+	elif int_x>0:
+		return('kid')
+	else:
+		return('invalid input')
+aa = age()
+print(aa)
+while aa==('invalid input'):
+	print("PLEASE INPUT AGAIN")
+	aa = age() #调用函数age()
+print("JUDGE END !")
