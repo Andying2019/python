@@ -1,0 +1,13 @@
+#使用range(输入负数后可循环重新输入)
+def sum():
+	sum=0
+	n=input('n:')
+	n=int(n)
+	while n<0:
+		print('please input positive number')
+		n=input('n:')
+		n=int(n)
+	for x in range(n+1):
+		if x%2==0:
+			sum=sum+x
+	return(sum)
