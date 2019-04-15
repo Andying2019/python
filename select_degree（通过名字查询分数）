@@ -1,0 +1,8 @@
+#通过名字查询分数
+def query_degree(name):
+	l={'A':100,'B':59,'C':88,'D':90}
+	degree = l[name] # l['A'] = 100 ,
+	return degree
+n = input('your name:')  
+d = query_degree(n)  #'A'
+print(d)
