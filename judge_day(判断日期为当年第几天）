@@ -3,7 +3,7 @@
 def judge_day(year,month,day):
 	
 	num = 0
-	if year % 4 == 0 and year%100!=0 or year%400==0:
+	if year % 4 == 0 and year%100!=0 or year%400==0:      #闰年：能被4整除且不能被100整除，或能被400整除
 		months = [31,29,31,30,31,30,31,31,30,31,30,31]
 	else:
 		months = [31,28,31,30,31,30,31,31,30,31,30,31]
