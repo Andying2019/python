@@ -1,0 +1,21 @@
+# 计算奖金 version 1
+def cacu_prof(amount):
+	if amount <0:
+		print("输入错误！")
+		return "请输入大于零的值"
+	elif amount<=10:
+		bonus=0.1*amount
+	elif amount<=20:
+		bonus=1+(amount-10)*0.075
+	elif amount<=40:
+		bonus=1+10*0.075+(amount-20)*0.05
+	elif amount<=60:
+		bonus=1+10*0.075+20*0.05+(amount-40)*0.03
+	elif amount<=100:
+		bonus=1+10*0.075+20*0.05+20*0.03+(amount-60)*0.015
+	elif amount>100:
+		bonus=1+10*0.075+20*0.05+20*0.03+40*0.015+(amount-100)*0.01
+	return bonus
+aa=cacu_prof(-9)
+
+print(aa)
