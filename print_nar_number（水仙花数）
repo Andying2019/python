@@ -7,6 +7,9 @@
 def get_100(num):
 	return (num % 1000)//100
 
+或：#仅针对三位数
+def get_100(num):
+	return num //100
 
 # 获取一个数的十位上的数,如153 则返回5
 def get_10(num):
