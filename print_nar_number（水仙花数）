@@ -1,0 +1,42 @@
+#打印出所有的"水仙花数"（narcissistic number），
+# 所谓"水仙花数"是指一个三位数，其各位数字立方和等于该数本身。
+# 例如：153是一个"水仙花数"，因为153=1的三次方＋5的三次方＋3的三次方。
+
+
+# 获取一个数的百位上的数,如153 则返回1
+def get_100(num):
+	return (num % 1000)//100
+
+
+# 获取一个数的十位上的数,如153 则返回5
+def get_10(num):
+	return (num %100)//10
+
+# 获取一个数的个位上的数,如153 则返回3
+def get_1(num):
+	return num % 10
+
+# a1 = get_100(153)
+# print(a1)
+# a2 = get_10(153)
+# print(a2)
+# a3 = get_1(153)
+# print(a3)
+
+def nar():
+	count = 0
+	# n=100*i+10*j+k
+	# i in range(0,9)
+	# j in range(0,9)
+	# k in range(0,9)
+	for n in range(100,999):
+		# print(n)
+		i = get_100(n)
+		j = get_10(n)
+		k = get_1(n)
+		if n==i*i*i+j*j*j+k*k*k:
+			print(n)
+			count+=1
+	return count
+aa=nar()
+print(aa)
