@@ -1,0 +1,45 @@
+#原始错误写法：
+def prime_number():
+	for i in range(1,100):
+		if i%1==i and i%i==1:
+			count(i)
+			print(i)
+prime_number()
+
+
+
+
+
+
+#判断是否是素数
+
+def is_prim(num):
+	for i in range(2,num-1):
+		if  num%i==0:
+			return  False
+	return  True
+is_prim(88)
+
+
+def prime_number():
+	count  = 0
+	for i in range(1,100):
+		a = is_prim(i)
+		if  a == True:
+			print(i)
+			count += 1
+	return count
+aa=prime_number()
+print(aa)
+
+
+
+def score(s):
+	if s>=90:
+		return 'A'
+	elif s<60:
+		return 'C'
+	else:
+		return 'B'  #return是返回，返回结果不可见
+aa=score(89)  #用变量接收返回值
+print (aa)
