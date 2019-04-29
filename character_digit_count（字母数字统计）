@@ -1,0 +1,76 @@
+# 判断一个字符s是不是数字,如果是则返回True,不是则返回False
+def is_digit(s):
+	digit = ['1','2','3','4','5','6','7','8','9']
+	for d in digit:
+		if s == d:
+			return True
+	return False
+
+# # 统计一个字符串里有多少个数字
+# def count_digit(str_a):
+# 	count = 0
+# 	for s in str_a:
+# 		# print(s)
+# 		if is_digit(s) == True:
+# 			count +=  1
+# 	return count
+
+# aa = count_digit("abd12 @p3%4")
+# print(aa)
+
+  
+
+
+#统计一个字符串里有多少个字母
+def is_character(ch):
+	character =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+	for c in character:
+		if ch==c:
+			return True
+	return False
+
+# def count_character(m):
+# 	count=0
+# 	for ch in m:
+# 		if is_character(ch)== True:
+# 			count+=1
+# 	return count
+# aa=count_character('abd12 @p3%4')
+# print(aa)
+
+
+#统计一个字符串里有多少个空格
+
+# def count_none(n):
+# 	count=0
+# 	for o in n:
+# 		if o==' ':
+# 			count+=1
+# 	return count
+# aa=count_none('abd12 @ 3 %4p')
+# print(aa)
+
+
+def is_none(c):
+	if c == ' ':
+		return True
+	else:
+		return False
+
+
+# 统计给定的字符串str_a中有多少个数字，字母，空格
+def count_digit_character_none(str_a):
+	digit_count = 0
+	character_count = 0
+	none_count = 0
+	for s in str_a:
+		if is_digit(s):
+			digit_count += 1
+		elif is_character(s):
+			character_count += 1
+		elif is_none(s):
+			none_count += 1
+	return [digit_count,character_count,none_count]
+
+aa=count_digit_character_none('abd12 @ 3 %4p')
+print(aa)
