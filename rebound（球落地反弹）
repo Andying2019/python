@@ -11,7 +11,7 @@ def rebound(n):
 		for i in range(2,n+1):
 			h+=100*2/(2**(i-1))
 			
-	return {'反弹高度':s,'经过距离':h}
+	return {'反弹高度':s,'经过距离':h}       #dict数据结构{key:value,key:value}
 
 aa=rebound(4)
 print(aa)
