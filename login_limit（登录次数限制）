@@ -1,0 +1,62 @@
+#实现用户输入用户名和密码，当用户名为seven且密码为123时，显示登陆成功，否则登陆失败
+
+user='seven'
+keyword=123   #123需加引号
+username=input('please input your name:')
+password=int(input('please input your password:'))  #int可去掉
+if username==user and password==keyword:
+	print('login successful')
+else:
+	print('login failiure')
+
+
+#登陆失败时允许重复输入三次
+
+user='seven'
+keyword='123'
+count=3
+for i in range(3):
+	username=input('please input your name:')
+	password=input('please input your password:')
+	if username==user and password==keyword:
+		print('login successful')
+		break
+	else:
+		count-=1
+		print('login failure,您还有%d次机会\n\n'%(count))
+
+
+
+#登录失败，重新输入（不限制次数）
+
+user='seven'
+keyword='123'
+
+while(1):    #while(a),当a为true时，执行while后面语句
+	username=input('please input your name:')
+	password=input('please input your password:')
+	if username==user and password==keyword:
+		print('login successful')
+		break
+	else:
+		print('login failure,try again!')
+
+
+
+#输入用户名不正确时，重新输入，直到正确为止
+user='seven'
+keyword='123'
+while(1):    #while(a),当a为true时，执行while后面语句
+	username=input('please input your name:')
+	if username==user:
+		print('go on')
+		break
+	else:
+		print('invalid username,try again')
+while(1):
+	password=input('please input your password:')
+	if password==keyword:
+		print('login successful')
+		break
+	else:
+		print('login failure,try again!')
