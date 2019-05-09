@@ -1,0 +1,11 @@
+#输入三个整数x,y,z，请把这三个数由小到大输出
+
+def V_max(a, b, c):
+	m = max(a, b, c)
+	l = min(a, b, c)
+    
+	for i in [a, b, c]:
+		if i not in [m, l]:
+			z = i
+	print(l,z,m)
+  V_max(12,11,10)
