@@ -1,10 +1,27 @@
-#一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数是多少
-
+# 一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数是多少
+# method 1：
 import math
 num=1
 while True:
 	if math.sqrt(num+100)-int(math.sqrt(num+100))==0 and\
 	 math.sqrt(num+268)-int(math.sqrt(num+268))==0:
+		print(num)
+		break
+	num+=1
+
+
+# method 2：
+
+#判断一个数是否是完全平方数
+def sqrt_able(n):
+	for i in range(n):
+		if i*i==n:
+			return True
+	return False
+
+num=1
+while True:
+	if sqrt_able(num+100) and sqrt_able(num+268):
 		print(num)
 		break
 	num+=1
