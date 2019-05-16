@@ -1,3 +1,16 @@
+#输入一行字符，分别统计出其中英文字母、空格、数字和其它字符的个数
+
+method 1:
+
+str=input('请输入一串字符')
+s={}
+for i in str:
+	s[i]=str.count(i)
+print(s)
+
+
+method 2:
+
 # 判断一个字符s是不是数字,如果是则返回True,不是则返回False
 def is_digit(s):
 	digit = ['1','2','3','4','5','6','7','8','9']
