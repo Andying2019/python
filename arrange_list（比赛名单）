@@ -1,0 +1,34 @@
+#两个乒乓球队进行比赛，各出三人。甲队为a,b,c三人，乙队为x,y,z三人。已抽签决定比赛名单。有人向队员打听比赛的名单。a说他不和x比，c说他不和x,z比，请编程序找出三队赛手的名单
+
+#################################################################
+#brief :  判断给定的字符串str是否符合比赛规则
+#input :	str 比赛序列 如"axbycz"
+#Return: 	True符合比赛规则
+#			False:不符合
+#note:		比赛规则： a不与x比赛  c不与x比赛  c不与z比赛
+#举例：		str = "axbycz" ,return False
+#################################################################
+def is_correct_race(str):
+	# print("str = ",str)
+	for i in range( len(str) ):
+		# print("i = ",i)
+		if str[i] == 'a' and str[i+1] == 'x':
+			return False
+		if str[i] == 'c' and str[i+1] == 'x':
+			return False
+		if str[i] == 'c' and str[i+1] == 'z':
+			return False
+	return True
+
+
+L = []
+for i in ['x','y','z']:
+	for j in ['x', 'y', 'z']:
+		for k in ['x', 'y', 'z']:
+			if i==j or i == k or j == k:
+				continue
+			L.append('a'+i+'b'+j+'c'+k)
+# print(L)
+for str in L:
+	if is_correct_race(str) == True:
+		print(str)
