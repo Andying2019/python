@@ -1,0 +1,9 @@
+#获取一个数的所有位数，放入list
+
+def get_all_nums(n):
+	nums=[]
+	for i in range(len(str(n))):
+		nums.append(n%10)
+		n=n//10
+	return nums
+print(get_all_nums(12345))
