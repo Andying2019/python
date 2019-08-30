@@ -1,0 +1,8 @@
+##使用jupyter notebook
+
+import pandas as pd
+import numpy as np
+df = pd.read_csv('D:\python_learning_document\DataAnalyst.csv',encoding = 'gb2312')  ##DataAnalyst.csv数据文件名
+df.info()  ##查看数据整体情况
+df.head()  ##默认查看前5行，可指定行数，尾部数据可使用tail
+len(df.positionId.unique())   ##返回唯一值，查看的字段区分大小写
